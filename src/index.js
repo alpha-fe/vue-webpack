@@ -3,12 +3,15 @@ import VueRouter from 'vue-router';
 import ElementUI from 'element-ui';
 
 
+
+
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 
 
 import routes from './routes/routes';
 
+import '../public/styles/element.css';
 
 
 var router = new VueRouter({
