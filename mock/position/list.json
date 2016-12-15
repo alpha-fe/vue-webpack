@@ -1,0 +1,26 @@
+{
+
+  "success":true,
+  "content":{
+    "list":[
+      {
+        "name":"高级产品经理",
+        "city":"北京",
+        "level":"P7",
+        "salary":"13W-30W"
+      },
+      {
+        "name":"高级产品经理",
+        "city":"北京",
+        "level":"P7",
+        "salary":"13W-30W"
+      },
+      {
+        "name":"高级产品经理",
+        "city":"北京",
+        "level":"P7",
+        "salary":"13W-30W"
+      }
+    ]
+  }
+}
