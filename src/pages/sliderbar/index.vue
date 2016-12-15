@@ -8,8 +8,10 @@
           <el-menu-item index="1-1" :route="{path:'/chart'}">CHART</el-menu-item>
           <el-menu-item index="1-2" :route="{path:'/ui'}">UI</el-menu-item>
         </el-menu-item-group>
-        <el-menu-item-group title="分组">
-          <el-menu-item index="1-3">选项</el-menu-item>
+        <el-menu-item-group title="组件">
+          <el-menu-item index="1-3" :route="{path:'/selectbox'}">select组件</el-menu-item>
+          <el-menu-item index="1-4" :route="{path:'/table'}">table组件</el-menu-item>
+          <el-menu-item index="1-5" :route="{path:'/project-admin'}">项目列表-管理员</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-menu-item index="2"><i class="el-icon-menu"></i>导航</el-menu-item>
@@ -19,6 +21,11 @@
 
 <script>
 export default {
+    data(){
+        return{
+            list:[]
+        }
+    },
     methods: {
         handleOpen(key, keyPath) {
             console.log(key, keyPath);
