@@ -1,6 +1,6 @@
 <template id="hello-world" lang="html">
   <transition name="fade">
-    <div v-if="show">
+    <div class="alert">
       <h3>Hello world</h3>
       <slot name="hello"></slot>
       <slot name="world"></slot>
@@ -13,12 +13,9 @@ export default {
   name:'alert',
   data(){
     return {
-      show:false
     }
-  },
-  beforeCreate(){
-    this.show = true;
   }
+
 }
 </script>
 

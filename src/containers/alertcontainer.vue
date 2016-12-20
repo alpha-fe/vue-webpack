@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="alert-container">
     这是alertContainer
-    <button type="button"  name="button">BUTTON</button>
-    <Alert>
+    <button type="button" v-on:click="showAlert" name="button">BUTTON</button>
+    <Alert v-if="show">
       <p slot="hello">
         这是HELLO
       </p>
@@ -16,9 +16,21 @@
 <script>
 import Alert from '../components/alert';
 export default {
-  components:{
-    Alert
-  }
+    data() {
+        return {
+            show: false
+        }
+    },
+    components: {
+        Alert
+    },
+    methods: {
+        showAlert() {
+            this.show = !this.show;
+            console.log(this.show);
+        }
+    }
+
 }
 </script>
 
