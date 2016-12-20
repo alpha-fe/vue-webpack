@@ -14,7 +14,7 @@
           <el-menu-item index="1-5" :route="{path:'/project-admin'}">项目列表-管理员</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-menu-item index="2"><i class="el-icon-menu"></i>导航</el-menu-item>
+      <el-menu-item :route="{path:'/alert'}" index="2"><i class="el-icon-menu"></i>ALERT</el-menu-item>
       <el-menu-item index="3"><i class="el-icon-setting"></i>导航</el-menu-item>
     </el-menu>
 </template>

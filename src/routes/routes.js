@@ -1,11 +1,40 @@
 import AppContainer from '../containers/appcontainer.vue';
 // import ChartContainer from '../containers/chartcontainer.vue';
 
-// const ChartContainer = resolve => {
-//   require.ensure([],()=>{
-//     resolve(require('../containers/chartcontainer.vue'));
-//   });
-// };
+const ChartContainer = resolve => {
+  require.ensure([],()=>{
+    resolve(require('../containers/chartcontainer.vue'));
+  });
+};
+const UiContainer = resolve => {
+  require.ensure([],()=>{
+    resolve(require('../containers/uicontainer.vue'));
+  });
+};
+
+const table = resolve => {
+  require.ensure([],()=>{
+    resolve(require('../components/table.vue'));
+  })
+}
+
+const selectbox = resolve => {
+  require.ensure([],()=>{
+        resolve(require('../components/selectbox.vue'));
+  })
+}
+
+const projectAdmin = resolve => {
+  require.ensure([],()=>{
+        resolve(require('../containers/project-admin'));
+  })
+}
+
+const AlertContainer = resolve => {
+  require.ensure([],()=>{
+    resolve(require('../containers/alertcontainer'));
+  })
+}
 
 const routes = [{
     path: '/',
@@ -13,22 +42,26 @@ const routes = [{
     children: [
         {
             path: '/chart',
-            component: resolve => require(['../containers/chartcontainer.vue'], resolve)
+            component: ChartContainer
         }, {
             path: '/ui',
-            component: resolve => require(['../containers/uicontainer.vue'], resolve)
+            component: UiContainer
         },
         {
             path:'/table',
-            component: resolve => require(['../components/table.vue'], resolve)
+            component: table
         },
         {
             path:'/selectbox',
-            component: resolve => require(['../components/selectbox.vue'], resolve)
+            component: selectbox
         },
         {
             path:'/project-admin',
-            component:resolve =>require(['../containers/project-admin'],resolve)
+            component:projectAdmin
+        },
+        {
+            path:'/alert',
+            component:AlertContainer
         }
         // {
         //     path: '/map',
