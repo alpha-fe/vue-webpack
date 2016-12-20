@@ -30,9 +30,9 @@ const projectAdmin = resolve => {
   })
 }
 
-const AlertContainer = resolve => {
+const DialogContainer = resolve => {
   require.ensure([],()=>{
-    resolve(require('../containers/alertcontainer'));
+    resolve(require('../containers/dialogcontainer'));
   })
 }
 
@@ -61,7 +61,7 @@ const routes = [{
         },
         {
             path:'/alert',
-            component:AlertContainer
+            component:DialogContainer
         }
         // {
         //     path: '/map',

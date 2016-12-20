@@ -2,19 +2,22 @@
   <div class="alert-container">
     这是alertContainer
     <button type="button" v-on:click="showAlert" name="button">BUTTON</button>
-    <Alert v-if="show">
-      <p slot="hello">
-        这是HELLO
-      </p>
-      <div slot="world">
-        这是world
+    <PaiDialog v-if="show">
+      <div slot="dialog-title">
+        这是dialog-title
       </div>
-    </Alert>
+      <div slot="dialog-body">
+        这是dialog-body
+      </div>
+      <div slot="dialog-footer">
+        这是dialog-footer
+      </div>
+    </PaiDialog>
   </div>
 </template>
 
 <script>
-import Alert from '../components/alert';
+import PaiDialog from '../components/dialog';
 export default {
     data() {
         return {
@@ -22,7 +25,7 @@ export default {
         }
     },
     components: {
-        Alert
+        PaiDialog
     },
     methods: {
         showAlert() {

@@ -1,21 +1,20 @@
-<template id="hello-world" lang="html">
+<template id="pai-dialog" lang="html">
   <transition name="fade">
-    <div class="alert">
-      <h3>Hello world</h3>
-      <slot name="hello"></slot>
-      <slot name="world"></slot>
+    <div class="dialog">
+      <slot name="dialog-title"></slot>
+      <slot name="dialog-body"></slot>
+      <slot name="dialog-footer"></slot>
     </div>
   </transition>
 </template>
 
 <script>
 export default {
-  name:'alert',
+  name:'pai-dialog',
   data(){
     return {
     }
   }
-
 }
 </script>
 
