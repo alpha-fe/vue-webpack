@@ -50,6 +50,9 @@
 
 <script>
 import positionTable from './table.vue';
+
+import { CHART_LIST_PATH } from '../utils/configpath';
+
 var _ = require('lodash');
 export default {
     created(){//生命周期钩子，为啥只有这一个被执行？如果 Vue 实例对象只执行了created方法，那么说明绑定的 DOM 元素没有找到
@@ -88,7 +91,7 @@ export default {
             this.list[index].showPosition=!this.list[index].showPosition;
         },
         getdata(){
-          this.$http.get("/mock/compotion/list.json").then(res => {
+          this.$http.get(CHART_LIST_PATH).then(res => {
 
              _.forEach(res.body.content.list,function(obj){
                obj.showPosition = false;
