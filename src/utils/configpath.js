@@ -1,7 +1,7 @@
 const BASE_PATH = '/';
 
 
-// PATH路径名字，当前页面+业务+PATH
+// PATH路径 = 当前页面+业务+apiname
 
 
 // project-admin PAGE
