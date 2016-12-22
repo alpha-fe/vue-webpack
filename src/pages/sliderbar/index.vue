@@ -16,7 +16,7 @@
         </el-menu-item-group>
       </el-submenu>
       <el-menu-item :route="{path:'/alert'}" index="2"><i class="el-icon-menu"></i>ALERT</el-menu-item>
-      <el-menu-item index="3"><i class="el-icon-setting"></i>导航</el-menu-item>
+      <el-menu-item :route="{path:'/mock'}" index="3"><i class="el-icon-setting"></i>Mock</el-menu-item>
     </el-menu>
 </template>
 

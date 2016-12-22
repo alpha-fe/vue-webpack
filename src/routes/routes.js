@@ -44,6 +44,12 @@ const Form = resolve => {
   })
 };
 
+const MockApi = resolve => {
+  require.ensure([],()=>{
+    resolve(require('../containers/mockcontainer'));
+  })
+}
+
 const routes = [{
     path: '/',
     component: AppContainer,
@@ -74,6 +80,9 @@ const routes = [{
         {
             path:'/alert',
             component:DialogContainer
+        },{
+          path:'/mock',
+          component:MockApi
         }
         // {
         //     path: '/map',
