@@ -1,13 +1,6 @@
 <template lang="html">
     <div class="edit-position-container">
         <form @submit.prevent="handleSubmit">
-            <af-input name="职位名称"></af-input>
-            <af-input name="职位级别"></af-input>
-            <af-input name="所属部门"></af-input>
-            <af-input name="所属项目"></af-input>
-            <af-select name="喜爱的食物"></af-select>
-
-
             <div class="af-input">
                 <label for="">职位名称</label>
                 <input type="text" v-vuerify="item.pname" v-model="item.pname">
@@ -20,9 +13,19 @@
             <a class="cancle btn">取消</a>
             <a class="edit btn" v-on:click="showMessageBox">弹框</a>
 
-            <af-messagebox v-if="showBoxFlag" temp=""></af-messagebox>
+<af-messagebox v-if="showBoxFlag" temp="">
+    <form action="" slot="position-form" v-show="showBoxFlag">
+        <af-input name="职位名称"></af-input>
+        <af-input name="职位级别"></af-input>
+        <af-input name="所属部门"></af-input>
+        <af-input name="所属项目"></af-input>
+        <af-select name="喜爱的食物"></af-select>
+    </form>
+</af-messagebox>
 
         </form>
+
+
     </div>
 </template>
 

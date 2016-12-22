@@ -8,7 +8,7 @@
                 </div>
                 <div class="af-message-box-container">
                     确认后将不再展示该职位，您可以在精英会场中查看。
-
+                    <slot name="position-form"></slot>
                 </div>
                 <div class="af-message-box-btn">
                     <span class="message-sure-btn btn" v-on:click="sure">确认</span>
@@ -74,8 +74,6 @@
 .af-message-box{
     display: inline-block;
     position: relative;
-    width: 444px;
-    height: 146px;
     z-index: 999;
     background: #fff;
     border-radius: 3px;
