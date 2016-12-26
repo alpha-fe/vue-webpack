@@ -15,7 +15,7 @@ const UiContainer = resolve => {
 
 const table = resolve => {
   require.ensure([],()=>{
-    resolve(require('../components/table.vue'));
+    resolve(require('../components/table/table.vue'));
   })
 };
 

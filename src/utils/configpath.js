@@ -7,7 +7,7 @@ const BASE_PATH = '/';
 // project-admin PAGE
 
 export const CHART_LIST_PATH = BASE_PATH + 'mock/compotion/list.json';
-
+export const TREE_LIST = BASE_PATH + 'mock/position/tree.json';
 
 // A PAGE
 

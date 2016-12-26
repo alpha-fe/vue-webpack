@@ -13,19 +13,19 @@
             <a class="cancle btn">取消</a>
             <a class="edit btn" v-on:click="showMessageBox">弹框</a>
 
-<af-messagebox v-if="showBoxFlag" temp="">
-    <form action="" slot="position-form" v-show="showBoxFlag">
-        <af-input name="职位名称"></af-input>
-        <af-input name="职位级别"></af-input>
-        <af-input name="所属部门"></af-input>
-        <af-input name="所属项目"></af-input>
-        <af-select name="喜爱的食物"></af-select>
-    </form>
-</af-messagebox>
+            <af-messagebox v-if="showBoxFlag" temp="">
+                <form action="" slot="position-form" v-show="showBoxFlag">
+                    <af-input name="职位名称"></af-input>
+                    <af-input name="职位级别"></af-input>
+                    <af-input name="所属部门"></af-input>
+                    <af-input name="所属项目"></af-input>
+                    <af-select name="喜爱的食物"></af-select>
+                </form>
+            </af-messagebox>
 
         </form>
 
-
+        <af-tree></af-tree>
     </div>
 </template>
 
@@ -36,6 +36,7 @@
     import messagebox from '../components/message-box.vue';
     import VuerifyDirective from 'v-vuerify-next';
     import Vuerify from 'vuerify';
+    import aftree from '../components/tree/tree-bar.vue';
 
     Vue.use(Vuerify);
     Vue.use(VuerifyDirective);
@@ -50,7 +51,7 @@
         methods:{
             handleSubmit(){
                 if(this.$vuerify.check()){//手动触发校验所有数据
-                    this.$http.post("/mock/form/save.json",this.item).then(res => {
+                    this.$http.post("/mock/posts",this.item).then(res => {
                         if(res.body.success){
                             alert("save success~");
                         }
@@ -67,7 +68,8 @@
         components:{
             'af-input':afinput,
             'af-select':afselect,
-            'af-messagebox':messagebox
+            'af-messagebox':messagebox,
+            'af-tree':aftree
         },
         compouted:{
             errors(){

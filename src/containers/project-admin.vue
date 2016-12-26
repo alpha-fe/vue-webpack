@@ -8,7 +8,7 @@
 
 <script>
     import selectbox from '../components/form/select.vue';
-    import tablebox from '../components/table-include.vue';
+    import tablebox from '../components/table/table-include.vue';
     import pagebar from '../components/pagebar.vue';
     export default{
         data(){

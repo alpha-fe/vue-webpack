@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
         <div class="block">
             <span class="demonstration">显示总数</span>
             <el-pagination

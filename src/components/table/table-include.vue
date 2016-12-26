@@ -51,7 +51,7 @@
 <script>
 import positionTable from './table.vue';
 
-import { CHART_LIST_PATH } from '../utils/configpath';
+import { CHART_LIST_PATH } from '../../utils/configpath';
 
 var _ = require('lodash');
 export default {

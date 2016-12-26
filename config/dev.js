@@ -21,6 +21,12 @@ module.exports = {
         historyApiFallback: true, //可以解决浏览器刷新得不到内容的问题
         hot: true,
         inline: true
+//        proxy:{
+//            '/mock/*':{
+//                target:'http://localhost:8888',
+//                secure:false
+//            }
+//        }
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

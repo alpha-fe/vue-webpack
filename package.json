@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/.bin/webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "mock": "node_modules/.bin/json-server --watch save.json --port 8888",
+    "mockdev": "npm run mock & npm run dev"
   },
   "author": "",
   "license": "ISC",
